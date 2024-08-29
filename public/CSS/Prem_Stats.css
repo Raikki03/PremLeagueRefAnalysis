@@ -1,0 +1,115 @@
+#teamSelectDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  width: 100%; 
+}
+
+#teamSelectDiv .custom-select {
+  padding: 8px 12px;
+  margin-bottom: 10px; 
+  font-size: 16px;
+  border: 2px solid #00458b;
+  border-radius: 5px;
+  background-color: white;
+  color: #00458b;
+  width: auto; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+}
+
+#teamSelectDiv .custom-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00458b;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#teamSelectDiv .custom-button:hover {
+  background-color: #003366; 
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.centered-content > select, .centered-content > button {
+  margin: 0 auto; 
+  display: block; 
+}
+
+.select-button-container, #teamSelectDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: row; 
+  width: 100%;
+  margin: 20px 0;
+}
+
+#dataDisplayContainer {
+  width: 100%; 
+  overflow-x: auto; 
+  text-align: center; 
+}
+
+.table.table-striped {
+  width: auto; 
+  margin: auto; 
+  border-collapse: collapse; 
+}
+
+.table.table-striped th,
+.table.table-striped td {
+  text-align: left; 
+}
+
+
+.custom-select {
+  padding: 8px 12px;
+  margin: 5px;
+  font-size: 16px;
+  border: 2px solid #00458b;
+  border-radius: 5px;
+  background-color: white;
+  color: #00458b;
+  width: 20%;
+}
+.select-style, .custom-button {
+  padding: 8px 12px;
+  margin: 5px; 
+  font-size: 16px;
+  width: auto; 
+  appearance: none; 
+}
+
+
+.button-style, .custom-button {
+  border: none;
+  border-radius: 5px;
+  background-color: #00458b;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  
+  .table.table-striped th,
+  .table.table-striped td {
+      padding: 5px; 
+  }
+ 
+  .custom-select {
+    width: 55%; 
+  }
+
+  
+}

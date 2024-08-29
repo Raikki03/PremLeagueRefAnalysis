@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Decisions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+	
+    <link rel="stylesheet" href="../CSS/Decisions.css">
+  </head>
+  
+  <body>
+    
+    <div class="navbar">
+      <img src="Prem.png" alt="Premier League" class="navbar-logo">
+      <div class="navbar-links">
+          <a href="Main.html">Main</a>
+          <a href="Prem_Stats.html">Premier League Stats</a>
+          <a href="Decisions.html">Decisions</a>
+          <a href="League_Table.html">Referee League Table</a>
+          <a href="Analysis.html">Analysis</a>
+      </div>
+      <a href="Login.html" class="sign-out">Sign Out</a>
+  </div>
+<br>
+  <div class="page-title">
+      <h1>Decisions</h1>
+  </div>
+
+  <div class="form-inline">
+    <button id="createDecisionBtn" class="button" onclick="openDecision()">Create Decision</button>
+    <select id="sortSelect" class="select">
+    <option value="">Sort By</option>
+    <option value="username_asc">Username A-Z</option>
+    <option value="username_desc">Username Z-A</option>
+    <option value="referee_asc">Referee A-Z</option>
+    <option value="referee_desc">Referee Z-A</option>
+    <option value="total_votes_asc">Total Votes Ascending</option>
+    <option value="total_votes_desc">Total Votes Descending</option>
+    <option value="recently_uploaded">Recently Uploaded</option>
+  </select>
+  <input type="number" id="matchweekFilter" class="input" placeholder="Matchweek">
+  <button id="applyFiltersBtn" class="button">Apply Filters</button>
+</div>
+  <div id="timerContainer" style="display: none;">
+    Please wait <span id="timeLeft">00:00</span> to post again.
+</div>
+<div id="decisionPopup" class="popup-container" style="display: none;">
+    <div class="popup-content">
+        <textarea id="newDecisionText" placeholder="Describe the refereeing decision..."></textarea>
+        <select id="matchdaySelect" onchange="populateFixtureDropdown()"></select>
+
+        
+
+        <div id="fixtureSelectContainer" style="display: none;">
+          <br>
+            <select id="fixtureSelect" onchange="populateRefereeDropdown()"></select>
+        </div>
+        <br>
+        <div id="refereeSelectContainer" style="display: none;">
+            <select id="refereeSelect"></select>
+        </div>
+        <br>
+        <div id="incidentTypeSelectContainer" style="display: block;">
+          <label for="incidentTypeSelect">Incident Type:</label>
+          <select id="incidentTypeSelect">
+              <option value="">Select Incident Type</option>
+              <option value="Throw-in">Throw-in</option>
+              <option value="Corner">Corner</option>
+              <option value="Free-kick">Free-kick</option>
+              <option value="Penalty">Penalty</option>
+              <option value="Disallowed goal">Disallowed goal</option>
+              <option value="Offside">Offside</option>
+          </select>
+          <br>
+
+
+
+      </div>
+     
+      <div id="severityScoreContainer" style="display: block;">
+        <label for="severityScoreSelect">Severity Score:</label>
+        <select id="severityScoreSelect">
+            <option value="1">1 (Least Impactful)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Most Impactful)</option>
+        </select>
+    </div>
+<br>    
+    <div id="videoUploadContainer" class="file-container">
+      <input type="file" id="videoUpload" accept="video/*">
+      <label for="videoUpload">No file chosen</label>
+    </div>
+  <div class="popup-buttons">
+    <button class="button exit" onclick="closeDecisionPopup()">Exit</button>
+    <button class="button" id="postDecisionBtn">Post Decision</button>
+  </div>
+    </div>
+</div>
+
+
+
+    <div id="decisionsContainer">
+    </div>
+    <link rel="stylesheet" href="../CSS/Main.css">
+
+    <script src="../JS/Decisions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Main.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="Prem.png" alt="Premier League" class="navbar-logo">
+        <div class="navbar-links">
+            <a href="Main.html">Main</a>
+            <a href="Prem_Stats.html">Premier League Stats</a>
+            <a href="Decisions.html">Decisions</a>
+            <a href="League_Table.html">Referee League Table</a>
+            <a href="Analysis.html">Analysis</a>
+        </div>
+        <a href="Login.html" class="sign-out">Sign Out</a>
+    </div>
+    <br>
+    <div class="page-title">
+        <h1>Main</h1>
+    </div>
+    <br>
+    <br>
+    <div class="content-wrapper">       
+        <table class="table table-striped" id="leagueTable">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Team</th>
+                    <th>MP</th>
+                    <th>Wins</th>
+                    <th>Draws</th>
+                    <th>Losses</th>
+                    <th>Goal Difference</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div class="boxes-container">
+            <div id="most-upvoted-container" class="decision-container"></div>
+            <div id="most-downvoted-container" class="decision-container"></div>
+            <div id="top-referee-container" class="referee-container"></div>
+            <div id="bottom-referee-container" class="referee-container"></div>
+        </div>
+    </div>
+    
+    <script src="../JS/Main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Analysis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Analysis.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <div class="navbar">
+        <img src="Prem.png" alt="Premier League" class="navbar-logo">
+        <div class="navbar-links">
+            <a href="Main.html">Main</a>
+            <a href="Prem_Stats.html">Premier League Stats</a>
+            <a href="Decisions.html">Decisions</a>
+            <a href="League_Table.html">Referee League Table</a>
+            <a href="Analysis.html">Analysis</a>
+        </div>
+        <a href="Login.html" class="sign-out">Sign Out</a>
+    </div>
+  <br>
+    <div class="page-title">
+        <h1>Analysis</h1>
+    </div>
+
+<br>
+
+<div class="filter-section">
+    <div class="select-container">
+      <label for="teamSelect">Select Teams:</label>
+      <select id="teamSelect" multiple size="10">
+    <option value="Arsenal">Arsenal</option>
+    <option value="Aston Villa">Aston Villa</option>
+    <option value="Brentford">Brentford</option>
+	<option value="Bournemouth">Bournemouth</option>
+    <option value="Brighton">Brighton</option>
+    <option value="Burnley">Burnley</option>
+    <option value="Chelsea">Chelsea</option>
+    <option value="Crystal Palace">Crystal Palace</option>
+    <option value="Everton">Everton</option>
+    <option value="Fulham">Fulham</option>
+    <option value="Liverpool">Liverpool</option>
+	<option value="Luton Town">Luton Town</option>
+    <option value="Manchester City">Manchester City</option>
+    <option value="Manchester United">Manchester United</option>
+    <option value="Newcastle United">Newcastle United</option>
+	<option value="Nottingham Forest">Nottingham Forest</option>
+	<option value="Sheffield United">Sheffield United</option>
+    <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+    <option value="Watford">Watford</option>
+    <option value="West Ham">West Ham United</option>
+    <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
+</select>
+</div>
+
+<div class="select-container">
+    <label for="refereeSelect">Select Referees:</label>
+    <select id="refereeSelect" multiple size="10">
+    <option value="Anthony Taylor">Anthony Taylor</option>
+    <option value="Robert Jones">Robert Jones</option>
+    <option value="Michael Oliver">Michael Oliver</option>
+    <option value="John Brooks">John Brooks</option>
+    <option value="Andy Madley">Andy Madley</option>
+    <option value="Stuart Attwell">Stuart Attwell</option>
+    <option value="Peter Bankes">Peter Bankes</option>
+    <option value="Craig Pawson">Craig Pawson</option>
+    <option value="Tim Robinson">Tim Robinson</option>
+    <option value="Paul Tierney">Paul Tierney</option>
+    <option value="Simon Hooper">Simon Hooper</option>
+    <option value="David Coote">David Coote</option>
+    <option value="Chris Kavanagh">Chris Kavanagh</option>
+    <option value="Michael Salisbury">Michael Salisbury</option>
+    <option value="Samuel Barrott">Samuel Barrott</option>
+    <option value="Jarred Gillett">Jarred Gillett</option>
+    <option value="Thomas Bramall">Thomas Bramall</option>
+    <option value="Darren England">Darren England</option>
+    <option value="Graham Scott">Graham Scott</option>
+    <option value="Josh Smith">Josh Smith</option>
+    <option value="Darren Bond">Darren Bond</option>
+    <option value="Tony Harrington">Tony Harrington</option>
+    <option value="Robert Madley">Robert Madley</option>
+</select>
+</div>
+<button id="filterButton" class="filter-btn">Filter</button>
+</div>
+
+<canvas id="analysisChart" class="analysis-chart"></canvas>
+
+
+
+
+
+
+
+<div id="analysisResultsContainer"></div>
+
+
+<link rel="stylesheet" href="../CSS/Main.css">
+
+    <script src="../JS/Analysis.js"></script>
+	
+</body>
+</html>

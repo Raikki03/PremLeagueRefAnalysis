@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Premier League Stats</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../CSS/Prem_Stats.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="Prem.png" alt="Premier League" class="navbar-logo">
+        <div class="navbar-links">
+            <a href="Main.html">Main</a>
+            <a href="Prem_Stats.html">Premier League Stats</a>
+            <a href="Decisions.html">Decisions</a>
+            <a href="League_Table.html">Referee League Table</a>
+            <a href="Analysis.html">Analysis</a>
+        </div>
+        <a href="Login.html" class="sign-out">Sign Out</a>
+    </div>
+<br>
+    <div class="page-title">
+        <h1>Premier League Stats</h1>
+    </div>
+	
+    <br>
+	
+    <div class="select-button-container">
+        <select id="statSelect" class="custom-select">
+        <option value="none" selected>Select Statistic</option>
+        <option value="fixtures">Team Fixtures</option>
+        <option value="topScorers">Top Goal Scorers</option>
+		<option value="topAssisters">Top Assisters</option>
+        <option value="playerStats">Player Stats</option>
+
+    </select>
+    <button onclick="loadSelectedStat()" class="custom-button">Load Statistic</button>
+    </div>
+
+<br>
+   <div id="teamSelectDiv" class="centered-content" style="display: none;">
+    <select id="teamSelect" class="custom-select centered-content" >
+     <option value="Arsenal">Arsenal</option>
+            <option value="Aston Villa">Aston Villa FC</option>
+            <option value="Bournemouth">Bournemouth AFC</option>
+            <option value="Brentford">Brentford</option>
+            <option value="Brighton">Brighton & Hove Albion</option>
+            <option value="Burnley">Burnley</option>
+            <option value="Chelsea">Chelsea</option>
+            <option value="Crystal Palace">Crystal Palace</option>
+            <option value="Everton">Everton FC</option>
+            <option value="Fulham">Fulham</option>
+            <option value="Liverpool">Liverpool FC</option>
+            <option value="Luton Town">Luton Town</option>
+            <option value="Manchester City">Manchester City FC</option>
+            <option value="Manchester United">Manchester United FC</option>
+            <option value="Newcastle United">Newcastle United</option>
+            <option value="Nottingham Forest">Nottingham Forest</option>
+            <option value="Sheffield United">Sheffield United</option>
+            <option value="Tottenham Hotspur">Tottenham Hotspur FC</option>
+            <option value="West Ham United">West Ham United</option>
+            <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
+        </select>
+        <button class="custom-button centered-content">Load Team Fixtures</button>
+    </div>
+    <div id="playerStatsContainer" style="display: none;">
+        <table class="table table-bordered table-striped" id="playerStatsTable">
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Nation</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Matches Played</th>
+                    <th>Starts</th>
+                    <th>Minutes Played</th>
+                    <th>Minutes Per 90</th>
+                    <th>Goals</th>
+                    <th>Assists</th>
+                    <th>Goals Plus Assists</th>
+                    <th>Goals Non Penalty</th>
+                    <th>Penalty Kicks Made</th>
+                    <th>Penalty Kicks Attempted</th>
+                    <th>Yellow Cards</th>
+                    <th>Red Cards</th>
+                    <th>Expected Goals</th>
+                    <th>Non Penalty Expected Goals</th>
+                    <th>Expected Assists Goals</th>
+                    <th>Npxg Plus Xa</th>
+                    <th>Progressive Carries</th>
+                    <th>Progressive Passes</th>
+                    <th>Progressive Passes Received</th>
+                    <th>Goals Per 90</th>
+                    <th>Assists Per 90</th>
+                    <th>Goals Plus Assists Per 90</th>
+                    <th>Goals Non Penalty Per 90</th>
+                    <th>Goals Plus Assists Non Penalty Per 90</th>
+                    <th>Expected Goals Per 90</th>
+                    <th>Expected Assists Goals Per 90</th>
+                    <th>Expected Goals Plus Assists Per 90</th>
+                    <th>Non Penalty Expected Goals Per 90</th>
+                    <th>Npxg Plus Xa Per 90</th>
+                </tr>
+            </thead>
+            <tbody id="playerStatsTableBody"></tbody>
+        </table>
+    </div>
+<br>
+    <table class="table table-bordered table-striped" id="fixturesTable" style="display: none;">
+        <thead>
+            <tr>
+                <th class="date-column">Date</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="fixturesTableBody"></tbody>
+    </table>
+
+    <br>
+<div id="dataDisplayContainer"></div>
+    <link rel="stylesheet" href="../CSS/Main.css">
+    <script src="../JS/Prem_Stats.js"></script>
+</body>
+</html>

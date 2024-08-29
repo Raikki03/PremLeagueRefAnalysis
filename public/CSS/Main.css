@@ -1,0 +1,226 @@
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #031A6B; 
+  color: white;
+  padding: 20px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  height: 80px; 
+}
+
+.navbar-links a, .sign-out {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links a:hover, .navbar-links a.active, .sign-out:hover {
+  color: #031A6B; 
+  background-color: white; 
+  border-radius: 5px;
+}
+
+.sign-out {
+  background-color: red; 
+  color: white; 
+  padding: 15px 20px; 
+  text-decoration: none; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.sign-out:hover {
+  background-color: darkred; 
+  color: white !important; 
+  text-decoration: none !important; 
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+.boxes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.decision-container, .referee-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.table.table-striped {
+  max-width: 50%;
+  border-collapse: separate; 
+  border-spacing: 0;        
+  font-size: 1em;
+  background-color: white;
+}
+
+.table.table-striped thead {
+  background-color: #031A6B; 
+  color: white;
+}
+
+.table.table-striped thead th {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ddd; 
+  
+}
+.table.table-striped tbody td {
+  padding: 12px;
+  border: 1px solid #ddd; 
+}
+
+.table.table-striped tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+
+.table.table-striped tbody tr[data-rank="1"] {
+  background-color: gold; 
+}
+
+.table.table-striped tbody tr[data-rank="18"],
+.table.table-striped tbody tr[data-rank="19"],
+.table.table-striped tbody tr[data-rank="20"] {
+  background-color: red; 
+  color: white; 
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        border: 0;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .table {
+        white-space: nowrap;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px; 
+    }
+}
+
+
+.table.table-striped tbody tr.first-place {
+  background-color: rgb(252, 221, 48);
+  color: black; 
+}
+
+.table.table-striped tbody tr.last-places {
+  background-color: rgb(110, 0, 0);
+  color: white; 
+}
+.boxes-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  padding-left: 20px;
+  max-width: calc(50% - 20px); 
+}
+
+.decision-container, .referee-container {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  padding: 20px;
+  height: calc(25% - 15px); 
+}
+
+.decision-container h3, .referee-container h3 {
+  color: #031A6B; 
+  margin-bottom: 15px;
+}
+
+#most-upvoted-container, #top-referee-container {
+  background-color: #D4EDDA; 
+  border-left: 5px solid #28A745; 
+}
+
+#most-downvoted-container, #bottom-referee-container {
+  background-color: #F8D7DA; 
+  border-left: 5px solid #DC3545; 
+}
+
+
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .boxes-container {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .decision-container, .referee-container {
+    height: auto;
+  }
+}
+
+.page-title {
+  text-align: center;
+  background-color: #fff; 
+  padding: 10px 0; 
+  margin-top: -20px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  z-index: 999; 
+  position: sticky;
+  top: 60px; 
+  border-bottom: 1px solid #ddd; 
+}
+
+h1 {
+  margin: 0; 
+  font-size: 2em; 
+  color: #031A6B; 
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px 15px; 
+  }
+
+  .navbar-logo {
+    height: 40px; 
+  }
+
+  .navbar-links a, .sign-out {
+    font-size: 14px; 
+    padding: 5px 10px; 
+  }
+
+  .sign-out {
+    padding: 5px 10px; 
+  }
+}

@@ -1,0 +1,158 @@
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+
+.sign-out {
+  background-color: red;
+  color: white;
+}
+
+li a.sign-out:hover {
+  background-color: darkred;
+}
+
+#analysisChart {
+  height: auto; 
+  max-height: 400px; 
+  width: 100%; 
+  max-width: 800px;
+  margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+  #analysisChart {
+    max-width: 100%; 
+    max-height: 300px; 
+  }
+}
+
+
+.filter-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.select-container {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+
+select {
+  width: 220px;
+  height: auto; 
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 5px; 
+  background-color: white;
+  cursor: pointer; 
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+
+.filter-btn:hover {
+  background-color: #4363d3; 
+}
+
+@media (max-width: 768px) {
+  .select-container {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  select {
+    width: auto; 
+  }
+}select {
+  width: 240px; 
+  height: auto;
+  padding: 10px; 
+  border: 2px solid #cccccc; 
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1rem; 
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem; 
+  font-weight: bold;
+  text-align: left;
+}
+
+.filter-btn {
+  padding: 12px 25px; 
+  font-size: 1.2rem; 
+  border: none;
+  border-radius: 5px;
+  background-color: #031A6B;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; 
+  margin: 20px auto 0; 
+  width: 100px; 
+}
+
+.select-container {
+  display: inline-block;
+  margin: 10px 5px; 
+  vertical-align: top;
+}
+
+@media (max-width: 768px) {
+  .select-container,
+  .filter-btn {
+    width: 90%; 
+    margin: 10px auto; 
+    display: block; 
+  }
+}
+
+select[multiple] {
+  height: 160px; 
+  overflow-y: auto; 
+}
+#analysisResultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: none;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  #analysisResultsContainer {
+    flex-direction: column;
+    align-items: center;
+  }}

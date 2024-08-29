@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Admin.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Admin</h1>
+        <ul>
+            <li><a class="sign-out" href="Login.html">Sign Out</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="forms-section">
+            <h2>Add Fixture</h2>
+            <form id="addFixtureForm" class="form-style">
+                <input type="number" name="matchweek" placeholder="Matchweek" required>
+                <input type="date" name="match_date" placeholder="Match Date" required>
+                <input type="text" name="home_team" placeholder="Home Team" required>
+                <input type="text" name="away_team" placeholder="Away Team" required>
+                <input type="text" name="score" placeholder="Score" required>
+                <input type="text" name="VAR" placeholder="VAR" required>
+                <input type="text" name="Onfield" placeholder="Onfield" required>
+                <button type="submit">Add Fixture</button>
+            </form>
+        </div>
+        
+        <div class="delete-section">
+            <h2>Delete Fixture</h2>
+            <select id="matchweekSelect" required class="space">
+                <option value="">Select Matchweek</option>
+            </select>
+            <br>
+            <select id="fixtureSelect" class="space" required style="display: none;">
+                <option value="">Select Fixture</option>
+            </select>
+            <button id="deleteFixtureBtn" style="display: none;">Delete Fixture</button>
+            <br>
+            <h2>Delete Posts</h2>
+            <select id="decisionSelect">
+                <option value="">Select Decision Post</option>
+            </select>
+            <button id="deleteDecisionBtn" required style="display: none;">Delete Decision Post</button>
+        </div>
+
+        <div class="script-buttons">
+            <h2>Scripts</h2>
+            <button id="DecisionBtn">Run Decision Script</button>
+                <button id="GoalBtn">Run Goalscorer Script</button>
+                <button id="AssistBtn">Run Assist Script</button>
+                <button id="PlayerBtn">Run Team / Player Script</button>
+                <button id="StandingBtn">Run Standings Script</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/Admin.js"></script>
+</body>
+</html>

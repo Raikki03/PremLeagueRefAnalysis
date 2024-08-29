@@ -1,0 +1,83 @@
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.sign-out {
+  background-color: red; 
+  color: white; 
+  padding: 15px 20px; 
+  text-decoration: none; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.sign-out:hover {
+  background-color: darkred; 
+  color: white !important; 
+  text-decoration: none !important; 
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.forms-section, .delete-section, .script-buttons {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+.form-style input, .form-style button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.script-buttons button, .delete-section button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.space {
+  margin: 0 0 10px 0; 
+}
