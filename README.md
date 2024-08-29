@@ -1,68 +1,66 @@
-Premier League Refereeing Analysis
+# Premier League Refereeing Analysis
 
-Requirements
-Node.js: Pre-Installed
-Python: Pre-Installed
-Terminal or cmd prompt access
-Web-Browser access
+## Overview
 
-Information about this repository
-A Web-based System designed for user account creation in order to access features.
-Users will log in and verify and validate login information via authentication codes.
-The many features for users to access are:
-Basic Premier League Statistics
-Decision Posting, Editing and Deletion
-Decision Commenting
-Decision Sorting and Filtering
-Video Upload for Decision
-Viewable Referee League Table
-Analysis of selected Teams and Referees
-Brief Analytic Descriptions for selected Teams and Referees
+This is a web-based system designed for analyzing Premier League refereeing decisions. Users can create accounts, log in, and access various features related to Premier League statistics, user-opiniated referee performance, and more. The system allows users to interact with data by posting decisions, commenting, sorting, filtering, and even uploading videos. Additionally, users can view a referee league table and analyze selected teams and referees.
 
-Database
-The code utilizes a MySQL database schema, which contains tables to store every data.
-For Own Server Setup and Management: MySQL Server is needed: https://dev.mysql.com/downloads/mysql/
-For accessing an existing Server, to interact wth databases, execute queries etc, please install MySQL Workbench: https://dev.mysql.com/downloads/workbench/
-The connection to the database is already present in every code iteration requiring it such as server.js, as an existing Server connection:
+## Installation Guide
 
-// Database connection setup
+### Prerequisites
+
+- **Node.js**: [Download Node.js](https://nodejs.org/en)
+- **Python**: [Download Python](https://www.python.org/downloads/)
+
+### Node.js (Server.js)
+
+To set up the Node.js environment, navigate to the project directory and run the following command to install the necessary packages:
+
+```bash
+npm install express mysql2 crypto nodemailer multer child_process
+```
+
+## Features
+
+- **User Account Management**: Create and manage user accounts with authentication via verification codes.
+- **Premier League Statistics**: Access basic statistics related to the Premier League.
+- **Decision Management**: Post, edit, and delete decisions. Users can also comment on decisions.
+- **Sorting and Filtering**: Sort and filter decisions based on various criteria.
+- **Video Uploads**: Upload videos related to decisions.
+- **Referee League Table**: View rankings and statistics of referees in a league table format.
+- **Team and Referee Analysis**: Analyze selected teams and referees with brief descriptive insights.
+
+## Database Setup
+
+The project uses a MySQL database to store all data. 
+
+### For Own Server Setup and Management:
+
+1. **Install MySQL Server**: Download and install from [MySQL Server](https://dev.mysql.com/downloads/mysql/).
+2. **Set Up Database**:
+   - Import the database schema using the provided SQL dump file `PremAnalysis.sql`.
+   - Navigate to the MySQL bin directory in your terminal:
+     ```bash
+     cd "C:\Program Files\MySQL\MySQL Server X.X\bin"
+     ```
+     Replace `MySQL Server X.X` with your installed version.
+   - Run the following command to import the schema:
+     ```bash
+     mysql -u username -p premier_league_analysis < path_to_backup/PremAnalysis.sql
+     ```
+     Replace `username` with your MySQL username and `premier_league_analysis` with your database name.
+
+### Accessing an Existing Server:
+
+To interact with existing databases, execute queries, and manage the schema, install MySQL Workbench from [here](https://dev.mysql.com/downloads/workbench/).
+
+### Database Connection
+
+The connection to the MySQL database is already configured in the relevant code files, such as `server.js`. If setting up a new server, update the connection details:
+
+```javascript
 const db = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
   password: '...',
   database: 'premier_league_analysis'
 });
-
-
-For any new servers created, users will need to enter their own connection details.
-This also means a new database schema to be created, an import dump is present via the file 'PremAnalysis.sql'
-To import this, please navigate to the correct directory from the command line below:
-cd "C:\Program Files\MySQL\MySQL Server X.X\bin"
-NOTE: replace 'MySQL Server X.X' with the server version you have installed.
-Next please run the command line below to copy the essential database schema information:
-mysql -u username -p premier_league_analysis < path_to_backup/PremAnalysis.sql
-NOTE: you will need to change username, to a username created during server setup, as well as premier_league_analysis to the name of the database that will be injected.
-Finally please find the correct path to where the PremAnalysis.sql file is stored.
-
-Package Installation
-Below are command lines to install the necessary packages for the server.js and the Python API files:
-
-Server.js (Node.js)
-Before installation of Node.js Libraries, be sure to install Node.js first.
-Link: https://nodejs.org/en
-
-Python
-Before installation of Python Libraries, please ensure Python is installed first.
-Link: https://www.python.org/downloads/
-
-Installation
-
-npm install express mysql2 crypto nodemailer multer child_process
-
-
-
-Python API
-
-Installation
-
-pip install requests pandas beautifulsoup4 mysql-connector-python numpy
