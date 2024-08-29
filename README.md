@@ -18,6 +18,12 @@ To set up the Node.js environment, navigate to the project directory and run the
 ```bash
 npm install express mysql2 crypto nodemailer multer child_process
 ```
+## Python API
+
+For the Python environment, install the packages via the command below:
+```bash
+pip install requests pandas beautifulsoup4 mysql-connector-python numpy
+```
 
 ## Features
 
@@ -64,3 +70,19 @@ const db = mysql.createConnection({
   password: '...',
   database: 'premier_league_analysis'
 });
+```
+## Running the Server
+To run the Node.js server, navigate to the project directory and run the command below:
+
+```bash
+node server.js
+ ```
+
+## Contribution
+
+Feel free to fork this repository and submit pull requests. Contributions are welcome to improve the system!
+
+
+## Support
+
+For any issues or questions, please create an issue in this repository or contact the project maintainers.
