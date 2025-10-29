@@ -85,4 +85,4 @@ Feel free to fork this repository and submit pull requests. Contributions are we
 
 ## Support
 
-For any issues or questions, please create an issue in this repository or contact the project maintainers.
+For any issues or questions, please create an issue in this repository or contact me.
