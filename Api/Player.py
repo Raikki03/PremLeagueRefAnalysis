@@ -11,8 +11,8 @@ if sys.stdout.encoding != 'utf-8':
 url_team_ids = [
     '18bb7c10', '8602292d', '4ba7cbea', 'cd051869', 'd07537b9', '943e8050',
     'cff3d9bb', '47c64c55', 'd3fd31cc', 'fd962109', '822bd0ba', 'e297cd13',
-    'b8fd03ef', '19538871', 'b2b47a98', 'e4a775cb', '1df6b87e', '361ca564',
-    '7c21e445', '8cec06e1'
+    'b8fd03ef', '19538871', 'b2b47a98', 'e4a775cb', '5bfb9659', '361ca564',
+    '7c21e445', '8ef52968'
 ]  
 
 
